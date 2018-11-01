@@ -19,6 +19,9 @@ PipelineSecrets:
 jenkins:
   Master:
     ServiceType: NodePort
+    ServiceAnnotations:
+      fabric8.io/expose: "false"
+      fabric8.io/ingress.annotations: ""
 
 monocular:
   api:
