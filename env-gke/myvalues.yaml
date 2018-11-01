@@ -13,3 +13,20 @@ PipelineSecrets:
             "staging-k8s.gcr.io": "gcloud"
         }
     }
+
+# use NodePort for k8s service
+
+jenkins:
+  Master:
+    ServiceType: NodePort
+
+monocular:
+  api:
+    service:
+      type: NodePort
+  ui:
+    service:
+      type: NodePort
+  prerender:
+    service:
+      type: NodePort
